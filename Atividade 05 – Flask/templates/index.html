@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Catálogo de Filmes</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            min-height: 100vh;
+            background: #1a1a2e;
+            padding: 50px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 40px;
+            font-size: 32px;
+        }
+
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .item {
+            background: linear-gradient(135deg, var(--c1), var(--c2));
+            color: #fff;
+            text-decoration: none;
+            padding: 25px 35px;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s ease;
+        }
+
+        .item:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <h1>🎬 Catálogo de Filmes por Gênero</h1>
+    <div class="grid">
+        {% for chave, dados in generos.items() %}
+        <a class="item" style="--c1: {{ dados.cor1 }}; --c2: {{ dados.cor2 }};" href="/filme/{{ chave }}">
+            {{ dados.nome }}
+        </a>
+        {% endfor %}
+    </div>
+</body>
+</html>

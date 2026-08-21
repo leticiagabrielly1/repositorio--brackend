@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        form {
+            display: inline-block;
+        }
+
+        .campo {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .campo label {
+            width: 70px;
+        }
+
+        .campo input {
+            padding: 3px 5px;
+            width: 200px;
+        }
+
+        button {
+            padding: 5px 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form action="/login" method="post">
+        <div class="campo">
+            <label for="usuario">Usuário:</label>
+            <input type="text" id="usuario" name="usuario">
+        </div>
+        <div class="campo">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha">
+        </div>
+        <button type="submit">Entrar</button>
+    </form>
+</body>
+</html>
