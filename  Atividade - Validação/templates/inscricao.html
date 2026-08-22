@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Campeonato de Games</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #0f0f1a, #1b1b35);
+        color: white;
+        min-height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        background-color: #24243e;
+        width: 400px;
+        padding: 35px;
+        border-radius: 15px;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 28px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+
+    input,
+    select {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
+        background-color: #363653;
+        color: white;
+        font-size: 15px;
+        outline: none;
+        margin-bottom: 20px;
+    }
+
+    input:focus,
+    select:focus {
+        box-shadow: 0 0 0 2px #6c63ff;
+    }
+
+    select option {
+        background-color: #24243e;
+    }
+
+    button {
+        width: 100%;
+        padding: 13px;
+        border: none;
+        border-radius: 8px;
+        background: #6c63ff;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #574bdb;
+        transform: scale(1.02);
+    }
+
+    p {
+        text-align: center;
+        margin-top: 20px;
+        color: #7cff9b;
+        font-weight: bold;
+    }
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🎮 Campeonato de Games</h1>
+
+    <form method="POST">
+
+        <label>Nickname:</label>
+        <input type="text" name="nickname" placeholder="Digite seu nickname">
+
+        <label>Jogo:</label>
+        <select name="jogo">
+            <option value="">Selecione um jogo</option>
+            <option value="Free Fire">Free Fire</option>
+            <option value="Valorant">Valorant</option>
+            <option value="Minecraft">Minecraft</option>
+        </select>
+
+        <label>E-mail:</label>
+        <input type="email" name="email" placeholder="Digite seu e-mail">
+
+        <button type="submit">Inscrever-se</button>
+
+    </form>
+
+    <p>{{ mensagem }}</p>
+
+</div>
+
+</body>
+</html>
